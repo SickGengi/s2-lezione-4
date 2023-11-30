@@ -13,22 +13,22 @@ void quiz() {
     printf("B- L'Ultima cena \n");
     printf("C- La Mietitura \n");
 
-    while (1) {								                                                       //ciclo per ricevere in input a,b o c
+    while (1) {								                                     //ciclo per ricevere in input a,b o c
         printf("\nInserisci la tua risposta (A, B o C): ");
         scanf(" %c", &risposta);
-        risposta = toupper(risposta);					                                      //trasformare minuscole in maiuscole
+        risposta = toupper(risposta);					                         //trasformare minuscole in maiuscole
 
-        if (risposta == 'A' || risposta == 'B' || risposta == 'C') {	             //se risposta a,b o c --> break e prosegui
+        if (risposta == 'A' || risposta == 'B' || risposta == 'C') {	         //se risposta a,b o c --> break e prosegui
             break;
         } else {
-            printf("\nRisposta non valida. Inserisci A, B o C.\n");	               //wake up :)
+            printf("\nRisposta non valida. Inserisci A, B o C.\n");	            //wake up :)
         }
     }
 
-    if (risposta == 'B') {						                                            //calcolo risposta giusta e punteggio
+    if (risposta == 'B') {						                            //calcolo risposta giusta e punteggio
         punteggio++;
     } else {
-        printf("\nRisposta sbagliata \n");			  	                             //messaggio di risposta errata
+        printf("\nRisposta sbagliata \n");			  	                 //messaggio di risposta errata
     }
 
     // DOMANDA 2
@@ -136,7 +136,7 @@ void quiz() {
 int main() {
     int scelta, fine = 0;
 
-    printf("Il gioco consiste in 5 domande a risposta multipla: \n");		                          //menù iniziale
+    printf("Il gioco consiste in 5 domande a risposta multipla: \n");		        //menù iniziale
 
     do {
         printf("\n1-Iniziare una nuova partita\n");
@@ -144,18 +144,18 @@ int main() {
         scanf("%d", &scelta);
 
         switch (scelta) {
-            case 1: {							                                                              //scelta 1 "inizio gioco" ---> richiamo void quiz
+            case 1: {                //scelta 1 "inizio gioco" ---> richiamo void quiz
                 quiz();
                 break;
             }
 
-            case 2: {							                                                             //scelta 2 "fine gioco" ---> fine programma
+            case 2: {           //scelta 2 "fine gioco" ---> fine programma
                 fine = 1;
                 break;
             }
 
             default: {
-                printf("Selezione non valida\n");			                                         //wake up :)
+                printf("Selezione non valida\n");			       //wake up :)
                 break;
             }
         }
